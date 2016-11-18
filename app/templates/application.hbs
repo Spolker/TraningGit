@@ -1,0 +1,14 @@
+<h1>Photo Album</h1>
+
+<p>
+    <labal>
+{{input type="checkbox" checked=showLargeThumbnails}}
+    Large Thumbnails {{showLargeThumbnails}}
+    </labal>
+</p>
+
+<div class="thumbnails">
+{{#each model as |photo|}}
+  <img src={{photo.thumbUrl}} class={{if showLargeThumbnails "large-thumbnail" "small-thumbnail" }}>
+{{/each}}
+</div>
